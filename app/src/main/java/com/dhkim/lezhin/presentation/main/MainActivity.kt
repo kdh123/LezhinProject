@@ -3,6 +3,7 @@ package com.dhkim.lezhin.presentation.main
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import com.dhkim.lezhin.ui.theme.LezhinTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -12,7 +13,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            MainScreen()
+            LezhinTheme {
+                MainScreen()
+            }
         }
     }
 }
